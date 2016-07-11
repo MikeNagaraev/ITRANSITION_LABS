@@ -20758,3 +20758,2242 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.3ms)
 
 
+Started DELETE "/users/sign_out" for ::1 at 2016-07-11 11:26:46 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+nRbWY52BP6DOBZxdm0nq9TPKL4gP+71x7EyOUq48rMgEgpmHqZLJhDXD7guvKf7VaA+D4XiHrQMBz2/kHAppQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 90ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:26:46 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (21.1ms)
+Completed 200 OK in 346ms (Views: 332.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/auth/twitter" for ::1 at 2016-07-11 11:26:52 +0300
+Started GET "/users/auth/twitter" for ::1 at 2016-07-11 11:26:53 +0300
+Started GET "/users/auth/twitter/callback?oauth_token=6L4T-gAAAAAAwBlFAAABVdkQ8SM&oauth_verifier=N83jhWA385rXVGVKa7hheqf75TqNwrPE" for ::1 at 2016-07-11 11:27:01 +0300
+Processing by Users::OmniauthCallbacksController#twitter as HTML
+  Parameters: {"oauth_token"=>"6L4T-gAAAAAAwBlFAAABVdkQ8SM", "oauth_verifier"=>"N83jhWA385rXVGVKa7hheqf75TqNwrPE"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."url" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["url", "https://twitter.com/clowfigner13"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (13.6ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-07-11 08:27:02 UTC], ["last_sign_in_at", 2016-07-10 23:48:48 UTC], ["sign_in_count", 13], ["updated_at", 2016-07-11 08:27:02 UTC], ["id", 69]]
+  [1m[35m (86.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 105ms (ActiveRecord: 100.1ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:27:02 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (26.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+Completed 200 OK in 45ms (Views: 44.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-11 11:32:48 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"V7749Q9GgZeqPgCYwuEOJlyiW5TPUD6yTL+HK/ncthmFn1pBQT71w50YTpGAZoVwLxR4rZaX80WdFk2Q1wPFVg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:32:48 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.1ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2016-07-11 11:35:04 +0300
+Started GET "/users/auth/facebook" for ::1 at 2016-07-11 11:35:05 +0300
+Started GET "/users/auth/facebook/callback?code=AQB_nXl3t7dErnsM1MsO6qInBoB3Dx9ATzjdx9RmY5UCMaTt2wI3HFK86TF6BBXj32OWmLhwF1KNNf2WpVBeKmKfcNdUzxCTTLMd-BlqKba3ptnziMltM4d8wmaXuJmIoDJMH2NaME2eK1rQUsqC_YLiOlZgo1narq_Out_rMEj4T055J7-Ejovic412Zsjtu4Gl3VrVzUzCmokyCLoOKnyiiQ1JjfLuvA782d2po2jzmH2D9oWIta4HSGpFudyhB-9NFsm_UgUvDMYoTQuK58t9wSgAmHU9wcy4NlSWyyyWDnLNN_f9LMPgyKGoA0KbAW_DfrfQIKX-EIQMQjA78BFq&state=0524d93751168c8ce32f4bc9473a03e6ae6b37e5576e0c05" for ::1 at 2016-07-11 11:35:05 +0300
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQB_nXl3t7dErnsM1MsO6qInBoB3Dx9ATzjdx9RmY5UCMaTt2wI3HFK86TF6BBXj32OWmLhwF1KNNf2WpVBeKmKfcNdUzxCTTLMd-BlqKba3ptnziMltM4d8wmaXuJmIoDJMH2NaME2eK1rQUsqC_YLiOlZgo1narq_Out_rMEj4T055J7-Ejovic412Zsjtu4Gl3VrVzUzCmokyCLoOKnyiiQ1JjfLuvA782d2po2jzmH2D9oWIta4HSGpFudyhB-9NFsm_UgUvDMYoTQuK58t9wSgAmHU9wcy4NlSWyyyWDnLNN_f9LMPgyKGoA0KbAW_DfrfQIKX-EIQMQjA78BFq", "state"=>"0524d93751168c8ce32f4bc9473a03e6ae6b37e5576e0c05"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "Mikhail  Nagaraev"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-07-11 08:35:11 UTC], ["last_sign_in_at", 2016-07-10 23:43:15 UTC], ["sign_in_count", 21], ["updated_at", 2016-07-11 08:35:11 UTC], ["id", 58]]
+  [1m[35m (58.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 63ms (ActiveRecord: 59.3ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:35:11 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (24.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 58], ["LIMIT", 1]]
+Completed 200 OK in 45ms (Views: 43.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-11 11:40:34 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"nWZOQdAeSYw2a0d9HJwaVmMzDkh4dIat0Pt/4gG3P5RSauzJ2VzP4PbXpqh6XC5So719nQLMXjqNmBef1LP2Bw=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 58], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:40:34 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (8.5ms)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 11:42:15 +0300
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 11:42:15 +0300
+Started GET "/users/auth/vkontakte/callback?code=e3fea17541d1ec8b42&state=4cf78393d6cd8ff2f54b8de3d5e7600a561c12a29d19ee32" for ::1 at 2016-07-11 11:42:54 +0300
+Processing by Users::OmniauthCallbacksController#vkontakte as HTML
+  Parameters: {"code"=>"e3fea17541d1ec8b42", "state"=>"4cf78393d6cd8ff2f54b8de3d5e7600a561c12a29d19ee32"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."url" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["url", "http://vk.com/id69003001"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "http://vk.com/id69003001@vk.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "provider", "url", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "Антон Талецкий"], ["provider", "vkontakte"], ["url", "http://vk.com/id69003001"], ["created_at", 2016-07-11 08:42:55 UTC], ["updated_at", 2016-07-11 08:42:55 UTC], ["email", "http://vk.com/id69003001@vk.com"], ["encrypted_password", "$2a$11$Fb33h4F4gBJSP3UIo2Y4wO8rGT.k9ulhyKFjP6gQMSrRoisdeIIP6"]]
+  [1m[35m (66.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ? WHERE "users"."id" = ?[0m  [["updated_at", 2016-07-11 08:42:55 UTC], ["sign_in_count", 1], ["current_sign_in_at", 2016-07-11 08:42:55 UTC], ["last_sign_in_at", 2016-07-11 08:42:55 UTC], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["id", 71]]
+  [1m[35m (64.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 365ms (ActiveRecord: 131.9ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:42:55 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (18.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+Completed 200 OK in 45ms (Views: 43.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-11 11:43:04 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"M5aRfWASjowI48GfScP1YyM7zRuGdsS/5G/eKfLv1j34CCtCExim/zt6YrwmqcH3lmIA8M2Qe7BQ9h1Le2Orig=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:43:04 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (13.7ms)
+Completed 200 OK in 43ms (Views: 41.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 11:43:06 +0300
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 11:43:06 +0300
+Started GET "/users/auth/vkontakte/callback?code=aa2520824e3ee53462&state=8abe48235842b82821081ab90ac6af4b12c90dcae5793f98" for ::1 at 2016-07-11 11:43:06 +0300
+Processing by Users::OmniauthCallbacksController#vkontakte as HTML
+  Parameters: {"code"=>"aa2520824e3ee53462", "state"=>"8abe48235842b82821081ab90ac6af4b12c90dcae5793f98"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."url" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["url", "http://vk.com/id69003001"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-07-11 08:43:12 UTC], ["sign_in_count", 2], ["updated_at", 2016-07-11 08:43:12 UTC], ["id", 71]]
+  [1m[35m (67.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 73ms (ActiveRecord: 68.1ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:43:12 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-11 11:43:28 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1uXDcwOTUr+lwFFCaOK/rcBrZ2g+mveP0XjIuqId5tfyEi1CHQbH4FWHFpHdIW4qMfKiRyU5P4eWatwxShR5eA=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:43:28 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (8.0ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 11:43:29 +0300
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 11:43:30 +0300
+Started GET "/users/auth/vkontakte/callback?code=5f541c9ed43acd21c0&state=4923acafdcca08a937629e554e2f2256ddf418eb1b5b001a" for ::1 at 2016-07-11 11:44:08 +0300
+Processing by Users::OmniauthCallbacksController#vkontakte as HTML
+  Parameters: {"code"=>"5f541c9ed43acd21c0", "state"=>"4923acafdcca08a937629e554e2f2256ddf418eb1b5b001a"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."url" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["url", "http://vk.com/id107543773"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "http://vk.com/id107543773@vk.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "provider", "url", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "Сергей Кравцов"], ["provider", "vkontakte"], ["url", "http://vk.com/id107543773"], ["created_at", 2016-07-11 08:44:09 UTC], ["updated_at", 2016-07-11 08:44:09 UTC], ["email", "http://vk.com/id107543773@vk.com"], ["encrypted_password", "$2a$11$HaUMQydbVnx/eb/VMQFql.habRRu/H1LDkt7e.xEiwUTH.hrLNEuC"]]
+  [1m[35m (66.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ? WHERE "users"."id" = ?[0m  [["updated_at", 2016-07-11 08:44:09 UTC], ["sign_in_count", 1], ["current_sign_in_at", 2016-07-11 08:44:09 UTC], ["last_sign_in_at", 2016-07-11 08:44:09 UTC], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["id", 72]]
+  [1m[35m (129.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 325ms (ActiveRecord: 197.3ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:44:09 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (8.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 72], ["LIMIT", 1]]
+Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-11 11:44:17 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9jzsaEiVUpUlc9ssajXenopg4Qc5wPc9rlU4S7VnB9KAlG6Qqy8AeWVXGqKXXNoujyzksIjuTTG+5A76A9A1BA=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 72], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:44:17 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 11:44:18 +0300
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 11:44:19 +0300
+Started GET "/users/auth/vkontakte/callback?code=030d74d6f86b648200&state=d9cb09790737919d27de1c121566636f9216a22d3afc761a" for ::1 at 2016-07-11 11:44:19 +0300
+Processing by Users::OmniauthCallbacksController#vkontakte as HTML
+  Parameters: {"code"=>"030d74d6f86b648200", "state"=>"d9cb09790737919d27de1c121566636f9216a22d3afc761a"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."url" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["url", "http://vk.com/id107543773"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-07-11 08:44:20 UTC], ["sign_in_count", 2], ["updated_at", 2016-07-11 08:44:20 UTC], ["id", 72]]
+  [1m[35m (84.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 88ms (ActiveRecord: 84.5ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:44:20 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (8.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 72], ["LIMIT", 1]]
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-11 11:44:37 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dajBQ/wx8wVJb3yLZsbiei0jr3DTR6V5ear/6GgptI+Yub1ADj2VeRG6UJKAYoRNXgGk5B8mN82ULdVRq7+img=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 72], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:44:37 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (10.3ms)
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/auth/twitter" for ::1 at 2016-07-11 11:44:40 +0300
+Started GET "/users/auth/twitter" for ::1 at 2016-07-11 11:44:41 +0300
+Started GET "/users/auth/twitter/callback?oauth_token=dZnlTwAAAAAAwBlFAAABVdkhPXw&oauth_verifier=odeqXbevo4cpxjmaNKo6hAR6XA5nrzHA" for ::1 at 2016-07-11 11:44:53 +0300
+Processing by Users::OmniauthCallbacksController#twitter as HTML
+  Parameters: {"oauth_token"=>"dZnlTwAAAAAAwBlFAAABVdkhPXw", "oauth_verifier"=>"odeqXbevo4cpxjmaNKo6hAR6XA5nrzHA"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."url" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["url", "https://twitter.com/clowfigner13"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-07-11 08:44:55 UTC], ["last_sign_in_at", 2016-07-11 08:27:02 UTC], ["sign_in_count", 14], ["updated_at", 2016-07-11 08:44:55 UTC], ["id", 69]]
+  [1m[35m (95.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 101ms (ActiveRecord: 96.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:44:55 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (8.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-11 11:44:57 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"S8TFxCpO4+obLUeFOHyOwS+rfN/qFY+KqJxTG5OivanGilXamcF50Tpap/3p2CrX8zVk3F6lyBrHzs9PjHv6+g=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:44:57 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 11:44:58 +0300
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 11:44:59 +0300
+Started GET "/users/auth/vkontakte/callback?code=045d11e22d628bbdc6&state=e03fa65252f7281848711064712794b80089bbaedc5afebd" for ::1 at 2016-07-11 11:45:03 +0300
+Processing by Users::OmniauthCallbacksController#vkontakte as HTML
+  Parameters: {"code"=>"045d11e22d628bbdc6", "state"=>"e03fa65252f7281848711064712794b80089bbaedc5afebd"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."url" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["url", "http://vk.com/tell_me_the_truth_mother_fucker"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-07-11 08:45:03 UTC], ["last_sign_in_at", 2016-07-10 23:46:33 UTC], ["sign_in_count", 8], ["updated_at", 2016-07-11 08:45:03 UTC], ["id", 70]]
+  [1m[35m (110.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 114ms (ActiveRecord: 110.6ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:45:03 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 70], ["LIMIT", 1]]
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-11 11:45:23 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"X6doO54NK2++Sqjyj7IZFHqCFVHk1T8BKKvnSzItJwJ/Oy/A4kRsND27EJOO997KSdePWeplEND3gFHTfETBKw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 70], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:45:23 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (8.2ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:47:20 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (11.2ms)
+Completed 200 OK in 37ms (Views: 35.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:47:28 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (8.6ms)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 11:47:30 +0300
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 11:47:30 +0300
+Started GET "/users/auth/vkontakte/callback?code=5f73b06b372be72bca&state=192291eb55ba7f9e232bd54e68794d7742ee46297e3f334a" for ::1 at 2016-07-11 11:47:30 +0300
+Processing by Users::OmniauthCallbacksController#vkontakte as HTML
+  Parameters: {"code"=>"5f73b06b372be72bca", "state"=>"192291eb55ba7f9e232bd54e68794d7742ee46297e3f334a"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."url" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["url", "http://vk.com/tell_me_the_truth_mother_fucker"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-07-11 08:47:31 UTC], ["last_sign_in_at", 2016-07-11 08:45:03 UTC], ["sign_in_count", 9], ["updated_at", 2016-07-11 08:47:31 UTC], ["id", 70]]
+  [1m[35m (96.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 101ms (ActiveRecord: 97.0ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:47:31 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 70], ["LIMIT", 1]]
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-11 11:47:33 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"w4cwgEt46Qi2ez8abXAFdNNU8yf8X3WWe0z4ZWrWqHXjTeGBch1WIjDzLzRktfnHCV5CGb0m/LhhfOgnQFVSMQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 70], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:47:33 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (8.3ms)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:47:36 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2016-07-11 11:47:38 +0300
+Started GET "/users/auth/facebook" for ::1 at 2016-07-11 11:47:38 +0300
+Started GET "/users/auth/facebook/callback?code=AQDalnWpLUHSAA5VTlUSVkisq5TLNZGeoeJpBxHgsAlvUOIlE3YDLqG0W2CjtvBU2_RUApfoLRHPA4XCmXbPUv4WDDac42rqiYfV1BcVnoArLExw-r_48LNG0_jgkAUNNwxHeK6x3uNegipgNcYlw2wSZUI4peGMRh1y7pGY0PmlhKVg1xrs8DcZ2LH5yI-00nmesmAFQ_KLbNU6wJNF3t21OicFgXhgdUJbDU93xgijFuUJb4nhLegdQmpQKUUocxOgol3M2fcEU6NRopRq08-2dDM7MvKChUSpI6EIM3ent8rWXDo5CLjuKp_HqBY7bs5dJI-qfI7Yasio5lgEwcO8&state=1a45e499993c033755dcc4d8d3cc7f3e0ba9cd8ecd3aaeaa" for ::1 at 2016-07-11 11:47:39 +0300
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQDalnWpLUHSAA5VTlUSVkisq5TLNZGeoeJpBxHgsAlvUOIlE3YDLqG0W2CjtvBU2_RUApfoLRHPA4XCmXbPUv4WDDac42rqiYfV1BcVnoArLExw-r_48LNG0_jgkAUNNwxHeK6x3uNegipgNcYlw2wSZUI4peGMRh1y7pGY0PmlhKVg1xrs8DcZ2LH5yI-00nmesmAFQ_KLbNU6wJNF3t21OicFgXhgdUJbDU93xgijFuUJb4nhLegdQmpQKUUocxOgol3M2fcEU6NRopRq08-2dDM7MvKChUSpI6EIM3ent8rWXDo5CLjuKp_HqBY7bs5dJI-qfI7Yasio5lgEwcO8", "state"=>"1a45e499993c033755dcc4d8d3cc7f3e0ba9cd8ecd3aaeaa"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "Mikhail  Nagaraev"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-07-11 08:47:40 UTC], ["last_sign_in_at", 2016-07-11 08:35:11 UTC], ["sign_in_count", 22], ["updated_at", 2016-07-11 08:47:40 UTC], ["id", 58]]
+  [1m[35m (63.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 68ms (ActiveRecord: 64.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:47:40 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 58], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-11 11:47:47 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HVBKeNLqI895pfkIUF5O+ZBQvFSpdcnsrSo8mqhgG6Lns7k1dZHVsDDNvUg11xSs6NqzSiOa7ss+fDO0a+EpcQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 58], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:47:47 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (13.3ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:50:18 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/auth/twitter" for ::1 at 2016-07-11 11:50:20 +0300
+Started GET "/users/auth/twitter" for ::1 at 2016-07-11 11:50:22 +0300
+Started GET "/users/auth/twitter/callback?oauth_token=ZnOsogAAAAAAwBlFAAABVdkmbvA&oauth_verifier=ljPKbBovm7ijC2ql62k3CwT007TgA0E9" for ::1 at 2016-07-11 11:50:24 +0300
+Processing by Users::OmniauthCallbacksController#twitter as HTML
+  Parameters: {"oauth_token"=>"ZnOsogAAAAAAwBlFAAABVdkmbvA", "oauth_verifier"=>"ljPKbBovm7ijC2ql62k3CwT007TgA0E9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."url" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["url", "https://twitter.com/clowfigner13"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-07-11 08:50:30 UTC], ["last_sign_in_at", 2016-07-11 08:44:55 UTC], ["sign_in_count", 15], ["updated_at", 2016-07-11 08:50:30 UTC], ["id", 69]]
+  [1m[35m (116.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 121ms (ActiveRecord: 117.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:50:30 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (6.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/70" for ::1 at 2016-07-11 11:50:34 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/70"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered collection of /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [27 times] (22.0ms)
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.3ms)
+  Rendering /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (57.9ms)
+Started GET "/users/70" for ::1 at 2016-07-11 11:50:54 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/70"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered collection of /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [27 times] (4.8ms)
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendering /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (41.7ms)
+Started GET "/users/70" for ::1 at 2016-07-11 11:51:05 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/70"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered collection of /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [27 times] (4.9ms)
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendering /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (23.3ms)
+Started GET "/users/70" for ::1 at 2016-07-11 11:51:10 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/70"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered collection of /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [27 times] (4.9ms)
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendering /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (26.5ms)
+Started GET "/users/70" for ::1 at 2016-07-11 11:51:18 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/70"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered collection of /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [27 times] (6.0ms)
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendering /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (26.1ms)
+Started DELETE "/users/sign_out" for ::1 at 2016-07-11 11:51:21 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"M4Ca6RrpMdRgC0AgUCHAlMLGFlPJLWz20wr245xKJ9hcWoFMZ67dLaSIiILkbt6fGJtnQlmYtpHYAtnTLXUBcg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-11 11:51:21 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"M4Ca6RrpMdRgC0AgUCHAlMLGFlPJLWz20wr245xKJ9hcWoFMZ67dLaSIiILkbt6fGJtnQlmYtpHYAtnTLXUBcg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-11 11:51:21 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"M4Ca6RrpMdRgC0AgUCHAlMLGFlPJLWz20wr245xKJ9hcWoFMZ67dLaSIiILkbt6fGJtnQlmYtpHYAtnTLXUBcg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:51:21 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (15.7ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/auth/twitter" for ::1 at 2016-07-11 11:51:23 +0300
+Started GET "/users/auth/twitter" for ::1 at 2016-07-11 11:51:29 +0300
+Started GET "/users/auth/twitter/callback?oauth_token=uCO7nwAAAAAAwBlFAAABVdknd24&oauth_verifier=Ssls9bH8XH9ThWkLPKgZbpkPDCRTfc6S" for ::1 at 2016-07-11 11:51:31 +0300
+Processing by Users::OmniauthCallbacksController#twitter as HTML
+  Parameters: {"oauth_token"=>"uCO7nwAAAAAAwBlFAAABVdknd24", "oauth_verifier"=>"Ssls9bH8XH9ThWkLPKgZbpkPDCRTfc6S"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."url" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["url", "https://twitter.com/clowfigner13"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-07-11 08:51:33 UTC], ["last_sign_in_at", 2016-07-11 08:50:30 UTC], ["sign_in_count", 16], ["updated_at", 2016-07-11 08:51:33 UTC], ["id", 69]]
+  [1m[35m (118.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 123ms (ActiveRecord: 119.9ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:51:33 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (9.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+Completed 200 OK in 61ms (Views: 59.5ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/70" for ::1 at 2016-07-11 11:51:35 +0300
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"RlLJNaWbGsFZhyxoa79GbcMqvMBi7acsin5DIL8QCnQ/VR9udwwEyDf0LB8fRSyGDQTFJAZK+TyGGxyG7ryk1g==", "id"=>"70"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 70], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 70]]
+  [1m[35m (165.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 189ms (ActiveRecord: 166.8ms)
+
+
+Started GET "/users" for ::1 at 2016-07-11 11:51:35 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (12.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 38.6ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-11 11:51:49 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tb+uw/oNy57O+f8+BKvA82grb5T+DK/skpi76I6oVoHMuHiYKJrVl6CK/0lwUaoYpgUWcJqr8fye/eRO3wT4Iw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:51:49 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (10.6ms)
+Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 11:51:51 +0300
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 11:51:51 +0300
+Started GET "/users/auth/vkontakte/callback?code=c603c44603ab8e72df&state=c5f31db49e2745f14c1fc107bd2d5d5df9bc9bbe4efe9aaf" for ::1 at 2016-07-11 11:51:52 +0300
+Processing by Users::OmniauthCallbacksController#vkontakte as HTML
+  Parameters: {"code"=>"c603c44603ab8e72df", "state"=>"c5f31db49e2745f14c1fc107bd2d5d5df9bc9bbe4efe9aaf"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."url" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["url", "http://vk.com/tell_me_the_truth_mother_fucker"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "http://vk.com/tell_me_the_truth_mother_fucker@vk.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "provider", "url", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "Михаил Нагараев"], ["provider", "vkontakte"], ["url", "http://vk.com/tell_me_the_truth_mother_fucker"], ["created_at", 2016-07-11 08:51:53 UTC], ["updated_at", 2016-07-11 08:51:53 UTC], ["email", "http://vk.com/tell_me_the_truth_mother_fucker@vk.com"], ["encrypted_password", "$2a$11$15AV.BfBnWRgD90N2J4j0u7rKFi7uolbmT5YfF5i/.Bt5tXy6z6fq"]]
+  [1m[35m (63.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ? WHERE "users"."id" = ?[0m  [["updated_at", 2016-07-11 08:51:53 UTC], ["sign_in_count", 1], ["current_sign_in_at", 2016-07-11 08:51:53 UTC], ["last_sign_in_at", 2016-07-11 08:51:53 UTC], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["id", 73]]
+  [1m[35m (64.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 256ms (ActiveRecord: 128.6ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:51:53 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 73], ["LIMIT", 1]]
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/73" for ::1 at 2016-07-11 11:51:56 +0300
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+/nAwKQ0fuNL5T9oir9dAwkSd4pxfb49SbMj51OQ0SBRZGR1pO3jzBeR8Zo4HexsVD9683f4e0pvBA2TFqZXzA==", "id"=>"73"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 73], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 73]]
+  [1m[35m (119.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 122ms (ActiveRecord: 119.9ms)
+
+
+Started GET "/users" for ::1 at 2016-07-11 11:51:56 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 73], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 11:52:01 +0300
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 11:52:01 +0300
+Started GET "/users/auth/vkontakte/callback?code=40d1c4fa0051e2f9e6&state=0a3cea5ac28db071cdddb3c9240ac8c4b78d995ef33a8117" for ::1 at 2016-07-11 11:52:02 +0300
+Processing by Users::OmniauthCallbacksController#vkontakte as HTML
+  Parameters: {"code"=>"40d1c4fa0051e2f9e6", "state"=>"0a3cea5ac28db071cdddb3c9240ac8c4b78d995ef33a8117"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."url" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["url", "http://vk.com/tell_me_the_truth_mother_fucker"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "http://vk.com/tell_me_the_truth_mother_fucker@vk.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "provider", "url", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "Михаил Нагараев"], ["provider", "vkontakte"], ["url", "http://vk.com/tell_me_the_truth_mother_fucker"], ["created_at", 2016-07-11 08:52:02 UTC], ["updated_at", 2016-07-11 08:52:02 UTC], ["email", "http://vk.com/tell_me_the_truth_mother_fucker@vk.com"], ["encrypted_password", "$2a$11$NTCcsbxLo2P8ZH8TXyn/seHbPdoq6gansbDBmEwbCGSRumpYUKGNG"]]
+  [1m[35m (101.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ? WHERE "users"."id" = ?[0m  [["updated_at", 2016-07-11 08:52:03 UTC], ["sign_in_count", 1], ["current_sign_in_at", 2016-07-11 08:52:03 UTC], ["last_sign_in_at", 2016-07-11 08:52:03 UTC], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["id", 74]]
+  [1m[35m (63.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 292ms (ActiveRecord: 165.7ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:52:03 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (8.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 74], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-11 11:52:05 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SL2agBsnQsFW0Y8IdotglN+Si4bHLzCMZhoYzTw9pp+dhM4s2ISiSLrp9EI3pW+c4OXqFOB/pIHl8m1K9kUrfQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 74], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:52:05 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.1ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 11:52:06 +0300
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 11:52:07 +0300
+Started GET "/users/auth/vkontakte/callback?code=c00b4616bda6dad883&state=4239718377bc4b9aa0b6871f0db9007e74b1b92530c871a0" for ::1 at 2016-07-11 11:52:07 +0300
+Processing by Users::OmniauthCallbacksController#vkontakte as HTML
+  Parameters: {"code"=>"c00b4616bda6dad883", "state"=>"4239718377bc4b9aa0b6871f0db9007e74b1b92530c871a0"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."url" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["url", "http://vk.com/tell_me_the_truth_mother_fucker"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-07-11 08:52:08 UTC], ["sign_in_count", 2], ["updated_at", 2016-07-11 08:52:08 UTC], ["id", 74]]
+  [1m[35m (105.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 109ms (ActiveRecord: 106.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:52:08 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 74], ["LIMIT", 1]]
+Completed 200 OK in 44ms (Views: 42.4ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/74" for ::1 at 2016-07-11 11:52:10 +0300
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eKiVhhx1rIJshSiAn8PB8BhCHLMPvtN2BR3BzP5ZAt1Fboo10t7NYWVQYEjEkVjSxgq3p34dSiMUIGvwZEFZCg==", "id"=>"74"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 74], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 74]]
+  [1m[35m (144.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 147ms (ActiveRecord: 144.5ms)
+
+
+Started GET "/users" for ::1 at 2016-07-11 11:52:11 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 74], ["LIMIT", 1]]
+Completed 200 OK in 34ms (Views: 32.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 11:52:12 +0300
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 11:52:37 +0300
+Started GET "/users/auth/vkontakte/callback?code=069690465ab2cf3b93&state=09249ac15d84158d515fedd5ad12588c82e199800da7f7b7" for ::1 at 2016-07-11 11:52:38 +0300
+Processing by Users::OmniauthCallbacksController#vkontakte as HTML
+  Parameters: {"code"=>"069690465ab2cf3b93", "state"=>"09249ac15d84158d515fedd5ad12588c82e199800da7f7b7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."url" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["url", "http://vk.com/tell_me_the_truth_mother_fucker"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "http://vk.com/tell_me_the_truth_mother_fucker@vk.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "provider", "url", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "Михаил Нагараев"], ["provider", "vkontakte"], ["url", "http://vk.com/tell_me_the_truth_mother_fucker"], ["created_at", 2016-07-11 08:52:39 UTC], ["updated_at", 2016-07-11 08:52:39 UTC], ["email", "http://vk.com/tell_me_the_truth_mother_fucker@vk.com"], ["encrypted_password", "$2a$11$DzHbp84ZSjaF0xinmdqn9.JzVYaACqY7ss97.iy8c2ygNj8k0YREq"]]
+  [1m[35m (68.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ? WHERE "users"."id" = ?[0m  [["updated_at", 2016-07-11 08:52:39 UTC], ["sign_in_count", 1], ["current_sign_in_at", 2016-07-11 08:52:39 UTC], ["last_sign_in_at", 2016-07-11 08:52:39 UTC], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["id", 75]]
+  [1m[35m (64.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 265ms (ActiveRecord: 133.8ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:52:39 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 75], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/69" for ::1 at 2016-07-11 11:52:43 +0300
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xMySr8C45IhCjie05n4vCTlbHtdArKOvO/bKx9woBj3rTV9ELTmTOE4+uJpd/K2tNXsENpPr+m/r/sO+uW3Img==", "id"=>"69"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 69]]
+  [1m[35m (152.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 156ms (ActiveRecord: 153.1ms)
+
+
+Started GET "/users" for ::1 at 2016-07-11 11:52:43 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (6.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 75], ["LIMIT", 1]]
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-11 11:52:51 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"I5S3WQHcfC4jaiuD7IXJoq5Rx0k8pvjeWTiNsV40Ty8MFXqy7F0Lni/atK1XB0sGonHdqO/hoR6JMITIO3GBiA=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 75], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:52:51 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/auth/twitter" for ::1 at 2016-07-11 11:52:52 +0300
+Started GET "/users/auth/twitter" for ::1 at 2016-07-11 11:52:53 +0300
+Started GET "/users/auth/twitter/callback?oauth_token=Q6ZPFAAAAAAAwBlFAAABVdkovhE&oauth_verifier=JoHwI5EIMPNHUi6o5vgeaCrEflYOgHxO" for ::1 at 2016-07-11 11:53:02 +0300
+Processing by Users::OmniauthCallbacksController#twitter as HTML
+  Parameters: {"oauth_token"=>"Q6ZPFAAAAAAAwBlFAAABVdkovhE", "oauth_verifier"=>"JoHwI5EIMPNHUi6o5vgeaCrEflYOgHxO"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."url" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["url", "https://twitter.com/clowfigner13"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "https://twitter.com/clowfigner13@tw.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "provider", "url", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "Михаил Нагараев"], ["provider", "twitter"], ["url", "https://twitter.com/clowfigner13"], ["created_at", 2016-07-11 08:53:04 UTC], ["updated_at", 2016-07-11 08:53:04 UTC], ["email", "https://twitter.com/clowfigner13@tw.com"], ["encrypted_password", "$2a$11$B4HRK7jQhS2nVFZfqqJJmukOpbhOp6xDCLZlYmV6p0ja/q6jdVjea"]]
+  [1m[35m (82.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ? WHERE "users"."id" = ?[0m  [["updated_at", 2016-07-11 08:53:04 UTC], ["sign_in_count", 1], ["current_sign_in_at", 2016-07-11 08:53:04 UTC], ["last_sign_in_at", 2016-07-11 08:53:04 UTC], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["id", 76]]
+  [1m[35m (64.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 276ms (ActiveRecord: 148.1ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:53:04 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 76], ["LIMIT", 1]]
+Completed 200 OK in 29ms (Views: 27.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/76" for ::1 at 2016-07-11 11:53:06 +0300
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FEJgOnWpqdm+mXgv39x0oHdcy7qb8x31PoShYSpS4NIDPpEZSa8c4wHA9sMPH1jkJSvt1ceg2Wun8UpG5i+YqA==", "id"=>"76"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 76]]
+  [1m[35m (152.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 155ms (ActiveRecord: 153.3ms)
+
+
+Started GET "/users" for ::1 at 2016-07-11 11:53:06 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (6.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 76], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/auth/twitter" for ::1 at 2016-07-11 11:53:08 +0300
+Started GET "/users/auth/twitter" for ::1 at 2016-07-11 11:53:09 +0300
+Started GET "/users/auth/twitter/callback?oauth_token=sqP7xQAAAAAAwBlFAAABVdko_BM&oauth_verifier=YnzvbM9Lq3j36yARUPHfytP2xw939wMp" for ::1 at 2016-07-11 11:53:11 +0300
+Processing by Users::OmniauthCallbacksController#twitter as HTML
+  Parameters: {"oauth_token"=>"sqP7xQAAAAAAwBlFAAABVdko_BM", "oauth_verifier"=>"YnzvbM9Lq3j36yARUPHfytP2xw939wMp"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."url" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["url", "https://twitter.com/clowfigner13"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "https://twitter.com/clowfigner13@tw.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "provider", "url", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "Михаил Нагараев"], ["provider", "twitter"], ["url", "https://twitter.com/clowfigner13"], ["created_at", 2016-07-11 08:53:13 UTC], ["updated_at", 2016-07-11 08:53:13 UTC], ["email", "https://twitter.com/clowfigner13@tw.com"], ["encrypted_password", "$2a$11$euqLj1NKJ2wOyOJgvvig7OTld750N9reWXLNgk1iOTOfW03Jdcyry"]]
+  [1m[35m (105.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ? WHERE "users"."id" = ?[0m  [["updated_at", 2016-07-11 08:53:13 UTC], ["sign_in_count", 1], ["current_sign_in_at", 2016-07-11 08:53:13 UTC], ["last_sign_in_at", 2016-07-11 08:53:13 UTC], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["id", 77]]
+  [1m[35m (63.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 297ms (ActiveRecord: 170.1ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:53:13 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 77], ["LIMIT", 1]]
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-11 11:53:22 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CndwZRoLvkA0Of5+JmV+h55Q+ukIB2j0eUeCnq7Gaj1JvKnq96PXNc6UpGfZPQM/q3ZjBnp3pjmmjnoZQypOYA=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 77], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:53:22 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (12.2ms)
+Completed 200 OK in 32ms (Views: 31.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/auth/twitter" for ::1 at 2016-07-11 11:53:24 +0300
+Started GET "/users/auth/twitter" for ::1 at 2016-07-11 11:53:25 +0300
+Started GET "/users/auth/twitter/callback?oauth_token=U5jLeQAAAAAAwBlFAAABVdkpPNU&oauth_verifier=sqMfs4jjWdESGktuolVGWJPivoEy4YjK" for ::1 at 2016-07-11 11:53:27 +0300
+Processing by Users::OmniauthCallbacksController#twitter as HTML
+  Parameters: {"oauth_token"=>"U5jLeQAAAAAAwBlFAAABVdkpPNU", "oauth_verifier"=>"sqMfs4jjWdESGktuolVGWJPivoEy4YjK"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."url" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["url", "https://twitter.com/clowfigner13"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-07-11 08:53:29 UTC], ["sign_in_count", 2], ["updated_at", 2016-07-11 08:53:29 UTC], ["id", 77]]
+  [1m[35m (103.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 107ms (ActiveRecord: 103.9ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:53:29 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (24.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 77], ["LIMIT", 1]]
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/75" for ::1 at 2016-07-11 11:53:32 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/75"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered collection of /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [27 times] (8.8ms)
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendering /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (28.9ms)
+Started GET "/" for ::1 at 2016-07-11 11:53:39 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 77], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/75" for ::1 at 2016-07-11 11:53:42 +0300
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QvQllkIqbdExYF8oukPjRV63IOxMNxWe/+ee2/C1iarDCiw2MRepMJNQb3i8FO6oATrJqJqx0REgTyNAbKPBog==", "id"=>"75"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 75], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 75]]
+  [1m[35m (61.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 68ms (ActiveRecord: 62.4ms)
+
+
+Started GET "/users" for ::1 at 2016-07-11 11:53:42 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (6.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 77], ["LIMIT", 1]]
+Completed 200 OK in 30ms (Views: 28.4ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-11 11:53:47 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9mgKWKbO6jg+Ybqve26YZb9+yIw/VG+BUqchZJ5ogex3lgP41fMu2ZxRiv99OZWI4PMhyOnSqw6ND5z/An7J5A=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 77], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:53:47 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 11:53:49 +0300
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 11:53:49 +0300
+Started GET "/users/auth/vkontakte/callback?code=937d3d141574b7ee3e&state=5a83349b497fc3c7adf73dc728c10ffb0eda672953b019c5" for ::1 at 2016-07-11 11:54:06 +0300
+Processing by Users::OmniauthCallbacksController#vkontakte as HTML
+  Parameters: {"code"=>"937d3d141574b7ee3e", "state"=>"5a83349b497fc3c7adf73dc728c10ffb0eda672953b019c5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."url" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["url", "http://vk.com/tell_me_the_truth_mother_fucker"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "http://vk.com/tell_me_the_truth_mother_fucker@vk.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "provider", "url", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "Михаил Нагараев"], ["provider", "vkontakte"], ["url", "http://vk.com/tell_me_the_truth_mother_fucker"], ["created_at", 2016-07-11 08:54:07 UTC], ["updated_at", 2016-07-11 08:54:07 UTC], ["email", "http://vk.com/tell_me_the_truth_mother_fucker@vk.com"], ["encrypted_password", "$2a$11$xKzoNeH1laWgf6qYO0mJfu8OqL6NB6hPgDy3xLxDFCk.Cpbsvuip."]]
+  [1m[35m (100.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ? WHERE "users"."id" = ?[0m  [["updated_at", 2016-07-11 08:54:08 UTC], ["sign_in_count", 1], ["current_sign_in_at", 2016-07-11 08:54:08 UTC], ["last_sign_in_at", 2016-07-11 08:54:08 UTC], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["id", 78]]
+  [1m[35m (62.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 292ms (ActiveRecord: 164.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:54:08 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (11.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 78], ["LIMIT", 1]]
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-11 11:59:09 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"N3NcSdma+aqPRIaUz6jxxjNAGh+PDHcuFa40o8FUjj5NkomZ0XUu7CNu6WKlrNsOIb2tCbCijXdEJLK6lRGnoQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 78], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 11:59:09 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:04:00 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 12:04:07 +0300
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 12:04:08 +0300
+Started GET "/users/auth/vkontakte/callback?code=5ebd449ede66c4b88e&state=84fe525b8a2d3d2c07f42a7df30b115fc07a9ba9dc305be0" for ::1 at 2016-07-11 12:04:08 +0300
+Processing by Users::OmniauthCallbacksController#vkontakte as HTML
+  Parameters: {"code"=>"5ebd449ede66c4b88e", "state"=>"84fe525b8a2d3d2c07f42a7df30b115fc07a9ba9dc305be0"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."url" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["url", "http://vk.com/tell_me_the_truth_mother_fucker"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-07-11 09:04:11 UTC], ["sign_in_count", 2], ["updated_at", 2016-07-11 09:04:11 UTC], ["id", 78]]
+  [1m[35m (85.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 90ms (ActiveRecord: 85.4ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:04:11 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 78], ["LIMIT", 1]]
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/77" for ::1 at 2016-07-11 12:04:17 +0300
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fU+drSDW0fTtAqgbNkiIu8IRhDfv3XsJwoG73PGELW7jNyVYx9RmzlqMDhnomM7St2j3+mc/1YlE40OuRAyCeQ==", "id"=>"77"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 77], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 77]]
+  [1m[35m (63.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 67ms (ActiveRecord: 64.2ms)
+
+
+Started GET "/users" for ::1 at 2016-07-11 12:04:17 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (6.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 78], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-11 12:04:23 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FZ+5lvswnREA+NSb2t5p1EngLaPDWppDCxxq9X0/E/aL5wFjHDIqK7d2cpkEDi+9PJlebku4NMONfpKHyLe84Q=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 78], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:04:23 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 12:04:25 +0300
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 12:04:26 +0300
+Started GET "/users/auth/vkontakte/callback?code=1a22c8582ca7fc5103&state=710999a5c30666f8c95f93bb9c474a21add6ad95cdc570e4" for ::1 at 2016-07-11 12:04:27 +0300
+Processing by Users::OmniauthCallbacksController#vkontakte as HTML
+  Parameters: {"code"=>"1a22c8582ca7fc5103", "state"=>"710999a5c30666f8c95f93bb9c474a21add6ad95cdc570e4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."url" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["url", "http://vk.com/tell_me_the_truth_mother_fucker"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-07-11 09:04:29 UTC], ["last_sign_in_at", 2016-07-11 09:04:11 UTC], ["sign_in_count", 3], ["updated_at", 2016-07-11 09:04:29 UTC], ["id", 78]]
+  [1m[35m (104.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 109ms (ActiveRecord: 105.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:04:29 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 78], ["LIMIT", 1]]
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/78" for ::1 at 2016-07-11 12:04:32 +0300
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HpejLbTmsLLc+mbRYAJ22a5ElakOx9Et0n5pXv6eDLcGiuOnhL3Noc+UJ2Z7A2iTwvwHUj7PaxvMJWMFhl6bkg==", "id"=>"78"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 78], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 78]]
+  [1m[35m (122.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 125ms (ActiveRecord: 123.5ms)
+
+
+Started GET "/users" for ::1 at 2016-07-11 12:04:32 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (6.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 78], ["LIMIT", 1]]
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 12:04:34 +0300
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 12:04:35 +0300
+Started GET "/users/auth/vkontakte/callback?code=8d5e22f955c84129a5&state=3f3eb64400b19c5e34cc9bb9fb5a4ada5ca8e184a8102a7f" for ::1 at 2016-07-11 12:04:35 +0300
+Processing by Users::OmniauthCallbacksController#vkontakte as HTML
+  Parameters: {"code"=>"8d5e22f955c84129a5", "state"=>"3f3eb64400b19c5e34cc9bb9fb5a4ada5ca8e184a8102a7f"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."url" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["url", "http://vk.com/tell_me_the_truth_mother_fucker"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "http://vk.com/tell_me_the_truth_mother_fucker@vk.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "provider", "url", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "Михаил Нагараев"], ["provider", "vkontakte"], ["url", "http://vk.com/tell_me_the_truth_mother_fucker"], ["created_at", 2016-07-11 09:04:38 UTC], ["updated_at", 2016-07-11 09:04:38 UTC], ["email", "http://vk.com/tell_me_the_truth_mother_fucker@vk.com"], ["encrypted_password", "$2a$11$vHj.TjZRZMjLfnGoX6pRo.WofKqmiaFcasZaVAGb4SjVA/2LMrhpW"]]
+  [1m[35m (96.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ? WHERE "users"."id" = ?[0m  [["updated_at", 2016-07-11 09:04:38 UTC], ["sign_in_count", 1], ["current_sign_in_at", 2016-07-11 09:04:38 UTC], ["last_sign_in_at", 2016-07-11 09:04:38 UTC], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["id", 79]]
+  [1m[35m (63.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 293ms (ActiveRecord: 161.1ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:04:38 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 79], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:05:05 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (8.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 79], ["LIMIT", 1]]
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/79" for ::1 at 2016-07-11 12:05:13 +0300
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CzhCpaFkW8TCRbASfOsBhtcuHJfX7sN6BatcYeAMXAYnOzRrHfhxjQ6hjK0nkHcXk03NLlSMvA7Vq2QOqFDH2w==", "id"=>"79"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 79], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 79]]
+  [1m[35m (81.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 84ms (ActiveRecord: 81.9ms)
+
+
+Started GET "/users" for ::1 at 2016-07-11 12:05:14 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 79], ["LIMIT", 1]]
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 12:05:15 +0300
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 12:05:17 +0300
+Started GET "/users/auth/vkontakte/callback?code=27121f4ef51e94dfbd&state=c2dced4951f7ff7ee35c984edabbd7620151a15096ff0949" for ::1 at 2016-07-11 12:05:17 +0300
+Processing by Users::OmniauthCallbacksController#vkontakte as HTML
+  Parameters: {"code"=>"27121f4ef51e94dfbd", "state"=>"c2dced4951f7ff7ee35c984edabbd7620151a15096ff0949"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."url" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["url", "http://vk.com/tell_me_the_truth_mother_fucker"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "http://vk.com/tell_me_the_truth_mother_fucker@vk.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "provider", "url", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "Михаил Нагараев"], ["provider", "vkontakte"], ["url", "http://vk.com/tell_me_the_truth_mother_fucker"], ["created_at", 2016-07-11 09:05:19 UTC], ["updated_at", 2016-07-11 09:05:19 UTC], ["email", "http://vk.com/tell_me_the_truth_mother_fucker@vk.com"], ["encrypted_password", "$2a$11$jIW2Cxs8aypVL0LzkSNyZe56jfLI76M4id3AI2i5uIC/E5c64MCsa"]]
+  [1m[35m (106.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ? WHERE "users"."id" = ?[0m  [["updated_at", 2016-07-11 09:05:19 UTC], ["sign_in_count", 1], ["current_sign_in_at", 2016-07-11 09:05:19 UTC], ["last_sign_in_at", 2016-07-11 09:05:19 UTC], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["id", 80]]
+  [1m[35m (63.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 298ms (ActiveRecord: 170.5ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:05:20 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (8.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:09:16 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (I18n::ArgumentError):
+    14:       %td{:bgcolor => "FFD700"}= user.provider
+    15:       %td{:bgcolor => "FFA500"}= user.sign_in_count
+    16:       %td{:bgcolor => "EE82EE"}= user.updated_at
+    17:       %td{:bgcolor => "00FFFF"}= link_to t('', :default => t("helpers.links.destroy")), user_path(user), :method => :delete
+  
+app/views/users/index.html.haml:17:in `block in _app_views_users_index_html_haml___3566523201875586596_70015657312960'
+app/views/users/index.html.haml:11:in `_app_views_users_index_html_haml___3566523201875586596_70015657312960'
+  Rendering /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.3ms)
+Started GET "/" for ::1 at 2016-07-11 12:09:24 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (8.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:09:36 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (6.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:10:17 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (6.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:10:19 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+Completed 200 OK in 33ms (Views: 31.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:15:47 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (6.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/80" for ::1 at 2016-07-11 12:16:05 +0300
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"LJs/Ce7B6cMUQSQhtInSUvnfMqQNecZwLB6YLjhEJ4QS7H6u+hctWd4z/Hh4TQNLd9MpL37fJyukNXXXzYSyhw==", "id"=>"80"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 80]]
+  [1m[35m (64.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 67ms (ActiveRecord: 64.3ms)
+
+
+Started GET "/users" for ::1 at 2016-07-11 12:16:06 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (6.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/auth/twitter" for ::1 at 2016-07-11 12:16:07 +0300
+Started GET "/users/auth/twitter" for ::1 at 2016-07-11 12:16:09 +0300
+Started GET "/users/auth/twitter/callback?oauth_token=Bupw1gAAAAAAwBlFAAABVdk-CgQ&oauth_verifier=fRpTdXi7FD2SXY0sOYzIl9MhZEo6PsOt" for ::1 at 2016-07-11 12:16:11 +0300
+Processing by Users::OmniauthCallbacksController#twitter as HTML
+  Parameters: {"oauth_token"=>"Bupw1gAAAAAAwBlFAAABVdk-CgQ", "oauth_verifier"=>"fRpTdXi7FD2SXY0sOYzIl9MhZEo6PsOt"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."url" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["url", "https://twitter.com/clowfigner13"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "https://twitter.com/clowfigner13@tw.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "provider", "url", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "Михаил Нагараев"], ["provider", "twitter"], ["url", "https://twitter.com/clowfigner13"], ["created_at", 2016-07-11 09:16:13 UTC], ["updated_at", 2016-07-11 09:16:13 UTC], ["email", "https://twitter.com/clowfigner13@tw.com"], ["encrypted_password", "$2a$11$a2fd4vwFubyn/1jKgMFixO1l3myCxA0goPc9PS5Mt5hIyoi0H/zOK"]]
+  [1m[35m (135.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ? WHERE "users"."id" = ?[0m  [["updated_at", 2016-07-11 09:16:13 UTC], ["sign_in_count", 1], ["current_sign_in_at", 2016-07-11 09:16:13 UTC], ["last_sign_in_at", 2016-07-11 09:16:13 UTC], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["id", 81]]
+  [1m[35m (64.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 328ms (ActiveRecord: 201.1ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:16:13 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (23.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 81], ["LIMIT", 1]]
+Completed 200 OK in 48ms (Views: 46.6ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/81" for ::1 at 2016-07-11 12:16:16 +0300
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YoQVA2xlIL6hG3rSswGEdZqO7LCnn+AZ7uSpqsB/2EtaLjQBDCBTcy49mq7hAW8fbEVCutnzrT0erdULWAwVOA==", "id"=>"81"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 81], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 81]]
+  [1m[35m (135.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 139ms (ActiveRecord: 136.7ms)
+
+
+Started GET "/users" for ::1 at 2016-07-11 12:16:16 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (6.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 81], ["LIMIT", 1]]
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 12:16:31 +0300
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 12:16:32 +0300
+Started GET "/users/auth/vkontakte/callback?code=1316af59a92aad5879&state=f1955ca325885f8291e9f1190749dac273f81f39b69a62ef" for ::1 at 2016-07-11 12:16:32 +0300
+Processing by Users::OmniauthCallbacksController#vkontakte as HTML
+  Parameters: {"code"=>"1316af59a92aad5879", "state"=>"f1955ca325885f8291e9f1190749dac273f81f39b69a62ef"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."url" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["url", "http://vk.com/tell_me_the_truth_mother_fucker"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "http://vk.com/tell_me_the_truth_mother_fucker@vk.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "provider", "url", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "Михаил Нагараев"], ["provider", "vkontakte"], ["url", "http://vk.com/tell_me_the_truth_mother_fucker"], ["created_at", 2016-07-11 09:16:33 UTC], ["updated_at", 2016-07-11 09:16:33 UTC], ["email", "http://vk.com/tell_me_the_truth_mother_fucker@vk.com"], ["encrypted_password", "$2a$11$RNbLMEB0TvwBVjrPsqexZO5/InrCs1JJL/xaSXuR75LfW24CH0GyC"]]
+  [1m[35m (60.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ? WHERE "users"."id" = ?[0m  [["updated_at", 2016-07-11 09:16:33 UTC], ["sign_in_count", 1], ["current_sign_in_at", 2016-07-11 09:16:33 UTC], ["last_sign_in_at", 2016-07-11 09:16:33 UTC], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["id", 82]]
+  [1m[35m (55.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 244ms (ActiveRecord: 117.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:16:33 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (6.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 82], ["LIMIT", 1]]
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:19:33 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 82], ["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 33.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:19:46 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 82], ["LIMIT", 1]]
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:22:19 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (14.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 82], ["LIMIT", 1]]
+Completed 200 OK in 46ms (Views: 44.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:22:30 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (6.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 82], ["LIMIT", 1]]
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-11 12:22:32 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eIHS2/C6GptK6egMzYubbXp7x7RCwju2fVMqkIKjqXxztVXOkfVcRMvl0N7yKJlqhVvUV8kj2RBCnQ0xs7H+mQ=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 82], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:22:32 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 25ms (Views: 24.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/auth/twitter" for ::1 at 2016-07-11 12:22:33 +0300
+  
+SocketError (Failed to open TCP connection to api.twitter.com:443 (getaddrinfo: Name or service not known)):
+  
+/usr/lib/ruby/2.3.0/net/http.rb:882:in `rescue in block in connect'
+/usr/lib/ruby/2.3.0/net/http.rb:879:in `block in connect'
+/usr/lib/ruby/2.3.0/timeout.rb:91:in `block in timeout'
+/usr/lib/ruby/2.3.0/timeout.rb:101:in `timeout'
+/usr/lib/ruby/2.3.0/net/http.rb:878:in `connect'
+/usr/lib/ruby/2.3.0/net/http.rb:863:in `do_start'
+/usr/lib/ruby/2.3.0/net/http.rb:852:in `start'
+/usr/lib/ruby/2.3.0/net/http.rb:1398:in `request'
+oauth (0.5.1) lib/oauth/consumer.rb:161:in `request'
+oauth (0.5.1) lib/oauth/consumer.rb:195:in `token_request'
+oauth (0.5.1) lib/oauth/consumer.rb:136:in `get_request_token'
+omniauth-oauth (1.1.0) lib/omniauth/strategies/oauth.rb:28:in `request_phase'
+omniauth-twitter (1.2.1) lib/omniauth/strategies/twitter.rb:61:in `request_phase'
+omniauth (1.3.1) lib/omniauth/strategy.rb:215:in `request_call'
+omniauth (1.3.1) lib/omniauth/strategy.rb:183:in `call!'
+omniauth (1.3.1) lib/omniauth/strategy.rb:164:in `call'
+omniauth (1.3.1) lib/omniauth/strategy.rb:186:in `call!'
+omniauth (1.3.1) lib/omniauth/strategy.rb:164:in `call'
+omniauth (1.3.1) lib/omniauth/strategy.rb:186:in `call!'
+omniauth (1.3.1) lib/omniauth/strategy.rb:164:in `call'
+warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+warden (1.2.6) lib/warden/manager.rb:34:in `catch'
+warden (1.2.6) lib/warden/manager.rb:34:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.0) lib/active_record/migration.rb:552:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.1ms)
+  Rendering /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.8ms)
+Started GET "/users/auth/twitter" for ::1 at 2016-07-11 12:22:39 +0300
+Started GET "/users/auth/twitter/callback?oauth_token=Zd_D4AAAAAAAwBlFAAABVdlD_-E&oauth_verifier=S2bzLsAtx6jHsdJqNZPw4lPFTkxDfSQL" for ::1 at 2016-07-11 12:22:42 +0300
+Processing by Users::OmniauthCallbacksController#twitter as HTML
+  Parameters: {"oauth_token"=>"Zd_D4AAAAAAAwBlFAAABVdlD_-E", "oauth_verifier"=>"S2bzLsAtx6jHsdJqNZPw4lPFTkxDfSQL"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."url" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["url", "https://twitter.com/clowfigner13"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "https://twitter.com/clowfigner13@tw.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "provider", "url", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "Михаил Нагараев"], ["provider", "twitter"], ["url", "https://twitter.com/clowfigner13"], ["created_at", 2016-07-11 09:22:45 UTC], ["updated_at", 2016-07-11 09:22:45 UTC], ["email", "https://twitter.com/clowfigner13@tw.com"], ["encrypted_password", "$2a$11$BDeWVkMFKNHHH68IN72MUeq9oT.8/epx1r2CmIXAB9o1C64s5Yx7q"]]
+  [1m[35m (128.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ? WHERE "users"."id" = ?[0m  [["updated_at", 2016-07-11 09:22:45 UTC], ["sign_in_count", 1], ["current_sign_in_at", 2016-07-11 09:22:45 UTC], ["last_sign_in_at", 2016-07-11 09:22:45 UTC], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["id", 83]]
+  [1m[35m (63.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 323ms (ActiveRecord: 193.0ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:22:45 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-11 12:22:47 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"MSmo2SRK/7afh4ocLUXF/aYjKSMRg0b4SM8h3NjFVZPdnpwcv/TLA2mFuSSKgiQ8y0OEDJ9imytInhYqrCtPxQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:22:47 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (8.2ms)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/auth/twitter" for ::1 at 2016-07-11 12:22:48 +0300
+Started GET "/users/auth/twitter" for ::1 at 2016-07-11 12:22:50 +0300
+Started GET "/users/auth/twitter/callback?oauth_token=NQ7g0wAAAAAAwBlFAAABVdlELSw&oauth_verifier=LE71GvR7ky44oRSyoHQDo9TQPhYYSGxr" for ::1 at 2016-07-11 12:22:53 +0300
+Processing by Users::OmniauthCallbacksController#twitter as HTML
+  Parameters: {"oauth_token"=>"NQ7g0wAAAAAAwBlFAAABVdlELSw", "oauth_verifier"=>"LE71GvR7ky44oRSyoHQDo9TQPhYYSGxr"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."url" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["url", "https://twitter.com/clowfigner13"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-07-11 09:22:56 UTC], ["sign_in_count", 2], ["updated_at", 2016-07-11 09:22:56 UTC], ["id", 83]]
+  [1m[35m (123.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 127ms (ActiveRecord: 123.5ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:22:56 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/82" for ::1 at 2016-07-11 12:23:01 +0300
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kXxuu3Bq6Tblkka9VP4m573detlspBsJ1douXrBAL0VAhxoxoVRV+8/V+S5r4V2Bi4f7KrOFo2h9O1y8A7cTSQ==", "id"=>"82"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 82], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 82]]
+  [1m[35m (139.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 142ms (ActiveRecord: 139.5ms)
+
+
+Started GET "/users" for ::1 at 2016-07-11 12:23:01 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-11 12:23:07 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ncgxgKhk+67GpVJ/Qcen5+qUKerOrDLX06+3gKNOhuFMM0UKeVpHY+zi7ex+2NyB3M6oGRGNirZ7TsViELm67Q=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:23:07 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (6.6ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 12:23:08 +0300
+Started GET "/users/auth/vkontakte" for ::1 at 2016-07-11 12:23:10 +0300
+Started GET "/users/auth/vkontakte/callback?code=62b2905ef0f810c2cd&state=a06b9beb56782437109de1b29006565128279714dfb2da21" for ::1 at 2016-07-11 12:23:10 +0300
+Processing by Users::OmniauthCallbacksController#vkontakte as HTML
+  Parameters: {"code"=>"62b2905ef0f810c2cd", "state"=>"a06b9beb56782437109de1b29006565128279714dfb2da21"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."url" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["url", "http://vk.com/tell_me_the_truth_mother_fucker"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "http://vk.com/tell_me_the_truth_mother_fucker@vk.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "provider", "url", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "Михаил Нагараев"], ["provider", "vkontakte"], ["url", "http://vk.com/tell_me_the_truth_mother_fucker"], ["created_at", 2016-07-11 09:23:12 UTC], ["updated_at", 2016-07-11 09:23:12 UTC], ["email", "http://vk.com/tell_me_the_truth_mother_fucker@vk.com"], ["encrypted_password", "$2a$11$ALnRPydeXT8p2HE2/lkemuB80nGd3qt6qYFu7D14lPiWegLY6/tzi"]]
+  [1m[35m (92.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ? WHERE "users"."id" = ?[0m  [["updated_at", 2016-07-11 09:23:12 UTC], ["sign_in_count", 1], ["current_sign_in_at", 2016-07-11 09:23:12 UTC], ["last_sign_in_at", 2016-07-11 09:23:12 UTC], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["id", 84]]
+  [1m[35m (62.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 287ms (ActiveRecord: 156.4ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:23:12 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 84], ["LIMIT", 1]]
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-11 12:23:17 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"iG0CEUjGm/7cHCjNr82yJmcbwmVAUYnaGaQbX613isIrFRX+9K8mETAX6jzv1jAWr2aHURW+T5VvM/jtidz2Xg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 84], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:23:17 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (12.6ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:24:54 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2016-07-11 12:26:33 +0300
+Started GET "/users/auth/facebook" for ::1 at 2016-07-11 12:26:34 +0300
+Started GET "/users/auth/facebook/callback?code=AQBqjUfc-8JzUlZric56-JB-2Vaqo4VqU38JvZAU8KD-8o5_dyUgaBUdhx9DHXajSTUfFvuSlmeb1dEVBBuPlCMBpkme622u_C845lEeemOzyFeh_An4IHUZtsmysXkP2TrK6s8NtUnZKG5lqS5T4Yrkc5AUFwwpcdehEWw61n0CeSe4l8fr8_3qdtxYzNgtqmNJjCyYbIFVwPDg3cZIJ7kbQ_B83rVP6Il11Sr2NmBvUHXZOy7hGmBvNjRjs78HoRxShYlqNiGJMOAgnM1DK3Lecszbjd9O_WQCzeDjiUtwksgk0Xmsu8e498UYKbqYV2YIb-NuPqSoND-wYRAk8xPZ&state=589748fa2f1b04f33d2aecd38671f0ba73c702d7db900b0e" for ::1 at 2016-07-11 12:26:34 +0300
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQBqjUfc-8JzUlZric56-JB-2Vaqo4VqU38JvZAU8KD-8o5_dyUgaBUdhx9DHXajSTUfFvuSlmeb1dEVBBuPlCMBpkme622u_C845lEeemOzyFeh_An4IHUZtsmysXkP2TrK6s8NtUnZKG5lqS5T4Yrkc5AUFwwpcdehEWw61n0CeSe4l8fr8_3qdtxYzNgtqmNJjCyYbIFVwPDg3cZIJ7kbQ_B83rVP6Il11Sr2NmBvUHXZOy7hGmBvNjRjs78HoRxShYlqNiGJMOAgnM1DK3Lecszbjd9O_WQCzeDjiUtwksgk0Xmsu8e498UYKbqYV2YIb-NuPqSoND-wYRAk8xPZ", "state"=>"589748fa2f1b04f33d2aecd38671f0ba73c702d7db900b0e"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "Mikhail  Nagaraev"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-07-11 09:26:36 UTC], ["last_sign_in_at", 2016-07-11 08:47:40 UTC], ["sign_in_count", 23], ["updated_at", 2016-07-11 09:26:36 UTC], ["id", 58]]
+  [1m[35m (58.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 64ms (ActiveRecord: 59.8ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:26:36 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (6.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 58], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-11 12:29:51 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"f9zC8qWOaQXMbt75Nd8vyeXzzUZBlJS3NGVUKWzZRiSJkhkCCow4shnU2LBkpRXQyFkDFuGYNG5h2kd8wss8rQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 58], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:29:51 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:44:52 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (24.6ms)
+Completed 500 Internal Server Error in 360ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user_github_omniauth_authorize_path' for #<#<Class:0x00000003f040a8>:0x00000003edc710>
+Did you mean?  user_twitter_omniauth_authorize_path
+               user_twitter_omniauth_authorize_url
+               user_facebook_omniauth_authorize_path
+               user_vkontakte_omniauth_authorize_path):
+    18:               = link_to image_tag('https://www.facebook.com/images/fb_icon_325x325.png', size:"60x60"), user_facebook_omniauth_authorize_path
+    19:               = link_to image_tag('https://new.vk.com/images/safari_152.png', size:"60x60"), user_vkontakte_omniauth_authorize_path
+    20:               = link_to image_tag('http://trendingcurrentevents.com/wp-content/uploads/2015/01/twitter-icon.png', size:"60x60"), user_twitter_omniauth_authorize_path
+    21:               = link_to image_tag('https://assets-cdn.github.com/images/modules/logos_page/Octocat.png', size:"60x60"), user_github_omniauth_authorize_path
+    22:           - if user_signed_in?
+    23:             .span9
+    24:               = yield
+  
+app/views/layouts/application.html.haml:21:in `_app_views_layouts_application_html_haml___2977680354640922483_32701240'
+  Rendering /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/mikhail/.gem/ruby/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.9ms)
+Started GET "/" for ::1 at 2016-07-11 12:45:26 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (16.5ms)
+Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/auth/github" for ::1 at 2016-07-11 12:45:28 +0300
+Started GET "/users/auth/github/callback?code=aae45bc5e30e92dc5425&state=18060010107b6f11963c4e6e6a2412cc456dab313b644b3a" for ::1 at 2016-07-11 12:45:36 +0300
+Processing by Users::OmniauthCallbacksController#github as HTML
+  Parameters: {"code"=>"aae45bc5e30e92dc5425", "state"=>"18060010107b6f11963c4e6e6a2412cc456dab313b644b3a"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."url" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["url", "https://github.com/MikhailLU"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "https://github.com/mikhaillu@gh.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "provider", "url", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "MikhailLU"], ["provider", "github"], ["url", "https://github.com/MikhailLU"], ["created_at", 2016-07-11 09:45:39 UTC], ["updated_at", 2016-07-11 09:45:39 UTC], ["email", "https://github.com/mikhaillu@gh.com"], ["encrypted_password", "$2a$11$2FmluQrN4q5bhLmqSDYHyOSL1OA3NXmacl/iowwAVVM3Vf.epx63q"]]
+  [1m[35m (81.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ? WHERE "users"."id" = ?[0m  [["updated_at", 2016-07-11 09:45:39 UTC], ["sign_in_count", 1], ["current_sign_in_at", 2016-07-11 09:45:39 UTC], ["last_sign_in_at", 2016-07-11 09:45:39 UTC], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["id", 85]]
+  [1m[35m (63.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 294ms (ActiveRecord: 146.4ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:45:39 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (8.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 85], ["LIMIT", 1]]
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-11 12:45:48 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SMAld8nqtT1MMB0XQax5AZX2mJOEnk/QCi02U2G5LuaVMIXY6WPiFAP7Jx7N834uPzMl1I3nLSruX052X60HRg=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 85], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:45:48 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (17.1ms)
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:48:20 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (9.5ms)
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:49:02 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (13.2ms)
+Completed 200 OK in 40ms (Views: 38.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:49:29 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (15.3ms)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:50:02 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (8.0ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:50:14 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (8.1ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:50:31 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (10.7ms)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:51:18 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (12.9ms)
+Completed 200 OK in 36ms (Views: 33.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:51:33 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (8.5ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:51:46 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.6ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:52:16 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (8.5ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:53:31 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (14.7ms)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:54:52 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:56:29 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (8.4ms)
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:56:46 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (8.0ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:57:48 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (8.6ms)
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:57:53 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (8.2ms)
+Completed 200 OK in 33ms (Views: 31.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:57:56 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (9.0ms)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:58:00 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (8.8ms)
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/auth/github" for ::1 at 2016-07-11 12:58:03 +0300
+Started GET "/users/auth/github" for ::1 at 2016-07-11 12:58:05 +0300
+Started GET "/users/auth/github/callback?code=021bff30a8ba7948c19a&state=031fcac77eff5af4366f199361b9e47871640e4089879d5a" for ::1 at 2016-07-11 12:58:06 +0300
+Processing by Users::OmniauthCallbacksController#github as HTML
+  Parameters: {"code"=>"021bff30a8ba7948c19a", "state"=>"031fcac77eff5af4366f199361b9e47871640e4089879d5a"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."url" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["url", "https://github.com/MikhailLU"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-07-11 09:58:08 UTC], ["sign_in_count", 2], ["updated_at", 2016-07-11 09:58:08 UTC], ["id", 85]]
+  [1m[35m (71.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 76ms (ActiveRecord: 71.6ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:58:08 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (8.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 85], ["LIMIT", 1]]
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-11 12:58:23 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FeRecGdnWhErMGtIWlz0lm47MkulbgQRP6KtitP7IHQKFoTNzwcUlMQIZ9dTzKVoejuESrkP5rzkt80Jzkvfog=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 85], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:58:23 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/auth/twitter" for ::1 at 2016-07-11 12:58:45 +0300
+Started GET "/users/auth/twitter" for ::1 at 2016-07-11 12:58:47 +0300
+Started GET "/users/auth/twitter/callback?oauth_token=4vSAKgAAAAAAwBlFAAABVdllEqs&oauth_verifier=pxqEA3tAKQULffGbDCJu71d3knmrGIrz" for ::1 at 2016-07-11 12:58:49 +0300
+Processing by Users::OmniauthCallbacksController#twitter as HTML
+  Parameters: {"oauth_token"=>"4vSAKgAAAAAAwBlFAAABVdllEqs", "oauth_verifier"=>"pxqEA3tAKQULffGbDCJu71d3knmrGIrz"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."url" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["url", "https://twitter.com/clowfigner13"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-07-11 09:58:51 UTC], ["last_sign_in_at", 2016-07-11 09:22:56 UTC], ["sign_in_count", 3], ["updated_at", 2016-07-11 09:58:51 UTC], ["id", 83]]
+  [1m[35m (116.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 121ms (ActiveRecord: 116.5ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:58:51 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (9.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+Completed 200 OK in 41ms (Views: 39.2ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-11 12:58:58 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qOJBWO1MPp0CAtgYOsFsDhwcdPlABZdoNH2ZC/viC+jo22yIANol84fdz1MKunM8pDyZPlobc0H4dhovzuPHJQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 12:58:58 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (9.2ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 13:43:04 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (99.8ms)
+Completed 200 OK in 521ms (Views: 491.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/auth/github" for ::1 at 2016-07-11 13:43:08 +0300
+Started GET "/users/auth/github" for ::1 at 2016-07-11 13:43:09 +0300
+Started GET "/users/auth/github/callback?code=e189d64084365a432afb&state=b399022c09557f71e51c78083a182e5b4c6778390cc9e4af" for ::1 at 2016-07-11 13:43:10 +0300
+Processing by Users::OmniauthCallbacksController#github as HTML
+  Parameters: {"code"=>"e189d64084365a432afb", "state"=>"b399022c09557f71e51c78083a182e5b4c6778390cc9e4af"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."url" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["url", "https://github.com/MikhailLU"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (8.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-07-11 10:43:12 UTC], ["last_sign_in_at", 2016-07-11 09:58:08 UTC], ["sign_in_count", 3], ["updated_at", 2016-07-11 10:43:12 UTC], ["id", 85]]
+  [1m[35m (121.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 150ms (ActiveRecord: 129.9ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 13:43:12 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (10.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 85], ["LIMIT", 1]]
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-11 13:43:21 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sTzrOKmRcGhZSEbW4U5+4lSw2MglbMoo5JiOqr0zEAtA6ayNlJ8zAfj1g6BHFEhrgybRz+5hAIS7eGVK6HLe7w=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 85], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-11 13:43:22 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.2ms)
+
+

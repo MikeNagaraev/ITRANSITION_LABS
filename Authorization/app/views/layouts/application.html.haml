@@ -3,7 +3,7 @@
   %head
     %meta(charset="utf-8")
     %meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    %title= content_for?(:title) ? yield(:title) : "Authproviders"
+    %title= content_for?(:title) ? yield(:title) : "Authorization"
     = csrf_meta_tags
     = javascript_include_tag "http://html5shim.googlecode.com/svn/trunk/html5.js"
     = stylesheet_link_tag "application", :media => "all"
@@ -18,6 +18,7 @@
               = link_to image_tag('https://www.facebook.com/images/fb_icon_325x325.png', size:"60x60"), user_facebook_omniauth_authorize_path
               = link_to image_tag('https://new.vk.com/images/safari_152.png', size:"60x60"), user_vkontakte_omniauth_authorize_path
               = link_to image_tag('http://trendingcurrentevents.com/wp-content/uploads/2015/01/twitter-icon.png', size:"60x60"), user_twitter_omniauth_authorize_path
+              = link_to image_tag('https://assets-cdn.github.com/images/modules/logos_page/Octocat.png', size:"60x60"), user_github_omniauth_authorize_path
           - if user_signed_in?
             .span9
               = yield

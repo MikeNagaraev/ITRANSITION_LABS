@@ -274,5 +274,5 @@ Devise.setup do |config|
 config.omniauth :facebook, '1222869904413327', '1c1f101dca8300cd879344ee2517e021'
 config.omniauth :vkontakte, '5541715', 'NYyt3Q9exaCmKmcFmwGl'
 config.omniauth :twitter, 'j58BnSvEKE7dWqpy0TFWAUVMT', 'MFFwFOQYzCCU0r2DBu8XMJsqlkCNQQfPCBDTbyjcgoSg0FRy0Z'
-
+config.omniauth :github, '5dffc06cfd3a6ebb9975', 'f4b2613237fbfa2637903fc3fcb274616511f90e'
 end

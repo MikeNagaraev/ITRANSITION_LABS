@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
-         :omniauthable, :omniauth_providers => [:facebook, :vkontakte, :twitter]
+         :omniauthable, :omniauth_providers => [:facebook, :vkontakte, :twitter, :github]
 
    
   def self.find_for_facebook_oauth access_token
@@ -38,6 +38,18 @@ class User < ActiveRecord::Base
         :url => access_token.info.urls.Twitter,
         :username => access_token.info.name, 
         :email => access_token.info.urls.Twitter+"@tw.com",
+        :password => Devise.friendly_token[0,20]) 
+    end
+  end
+
+  def self.find_for_github_oauth access_token
+    if user = User.where(:url => access_token.info.urls.GitHub).first
+      user
+    else 
+      User.create!(:provider => access_token.provider, 
+        :url => access_token.info.urls.GitHub,
+        :username => access_token.info.name, 
+        :email => access_token.info.urls.GitHub+"@gh.com",
         :password => Devise.friendly_token[0,20]) 
     end
   end

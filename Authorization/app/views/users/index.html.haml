@@ -14,4 +14,4 @@
       %td{:bgcolor => "FFD700"}= user.provider
       %td{:bgcolor => "FFA500"}= user.sign_in_count
       %td{:bgcolor => "EE82EE"}= user.updated_at
-      %td{:bgcolor => "00FFFF"}= link_to t('.destroy', :default => t("helpers.links.destroy")), user_path(user), :method => :delete,      :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')), :class => 'btn btn-mini btn-danger' 
+      %td{:bgcolor => "00FFFF"}= link_to t('.destroy', :default => t("helpers.links.destroy")), user_path(user), :method => :delete
