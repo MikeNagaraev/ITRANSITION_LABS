@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   get 'uploads/new'
-  resources :uploads
+  get 'user/load'
+
   resources :user do
-  	resources :images
+  	resources :uploads
   end
   devise_scope :user do
 	get '/users/sign_out' => 'devise/sessions#destroy'

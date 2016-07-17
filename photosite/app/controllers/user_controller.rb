@@ -8,17 +8,17 @@ class UserController < ApplicationController
   end
 
   def show
-  
   end
-  
-  # DELETE /users/1
-  # DELETE /users/1.json
+
   def destroy
     @user.destroy
     respond_to do |format|
       format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def upload
   end
 
   private
@@ -32,7 +32,4 @@ class UserController < ApplicationController
       params.fetch(:user, {})
     end
 
-    def local_image_path(name)
-      Rails.root.join('images', name).to_s
-    end
 end
