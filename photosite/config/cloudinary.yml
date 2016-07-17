@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dza2bty1l
+  api_key: '933772667626847'
+  api_secret: CX-fs8R_4_Ic0YWh-XlyycQtmOk
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dza2bty1l
+  api_key: '933772667626847'
+  api_secret: CX-fs8R_4_Ic0YWh-XlyycQtmOk
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dza2bty1l
+  api_key: '933772667626847'
+  api_secret: CX-fs8R_4_Ic0YWh-XlyycQtmOk
+  enhance_image_tag: true
+  static_image_support: false

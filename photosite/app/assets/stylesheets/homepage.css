@@ -1,0 +1,33 @@
+.header {
+	text-align: center;
+}
+.field {
+	size: 30;
+	text-align: center;
+}
+.actions{
+	text-align: center;
+}
+.page-header {
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+}
+.theme-dropdown .dropdown-menu {
+    position: static;
+    display: block;
+    margin-bottom: 20px;
+}
+.dropdown-menu {
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+}
+.home-button {
+	text-align: right;
+	padding: 50px;
+}
+.navbar-nav {
+    float: left;
+    margin: 0;
+}

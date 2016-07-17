@@ -1,0 +1,14 @@
+  <div class="actions">
+   
+	<%= link_to 'Load to Cloud', uploads_new_path(current_user),:class => "btn btn-lg btn-default"%>    
+	<%= link_to 'Create SlideShow', slide_show_create_path(current_user), :class => "btn btn-lg btn-default"%>
+
+	<% @user.images.all.each do |image| %>
+	<%= cl_image_tag(image["public_id"],
+		:height => 150,
+		:width => 150,
+		:crop => :fill)
+	%>
+	<% end %>
+</div>
+
