@@ -1,28 +1,6 @@
-  <div class="actions">
-   
-	<!--%= link_to 'Load to Cloud', user_load_path(current_user),:class => "btn btn-lg btn-default"%-->    
-	<%= link_to 'Create SlideShow', slide_show_create_path(current_user), :class => "btn btn-lg btn-default"%><br><br/>
-	<%= form_for([@user, @user.uploads.build], html: { multipart: true, class: "dropzone"}) do |f|  %>
-  	<div class="fallback">
-    	<%= f.file_field :image %><br>
-    	<%= f.submit "Upload" %>
-	  </div>
-	<% end %>
-
-	<br>
-
-	<% @user.uploads.all.each do |upload| %>
-	<%= cl_image_tag(upload["public_id"],
-		:height => 150,
-		:width => 150,
-		:crop => :fill)
-	%>
-	<% end %>
-	<br>
-	<% @user.uploads.all.each do |upload| %>
-	<%= p upload %>
-	<br>
-	<% end %>
-
+<div class="actions">
+	<%= link_to 'Photos', cloud_show_path(current_user),:class => "btn btn-lg btn-default"%>   
+	<%= link_to 'Upload photos', uploads_new_path(current_user),:class => "btn btn-lg btn-default"%>    
+	<%= link_to 'SlideShowes', slideshow_index_path(current_user), :class => "btn btn-lg btn-default"%><br><br/>
 </div>
 

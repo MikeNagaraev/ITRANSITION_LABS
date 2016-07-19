@@ -1,8 +1,6 @@
-<%= form_for(@upload, html: { multipart: true, class: "dropzone"}) do |f|  %>
-  <div class="fallback">
-    <%= f.file_field :image %><br>
-    <%= f.submit "Upload" %>
+<%= form_for([@user, @user.uploads.build], html: { multipart: true, class: "dropzone"}) do |f|  %>
+	<div class="fallback">
+	<%= f.file_field :image %><br>
+	<%= f.submit "Upload" %>
   </div>
 <% end %>
-
-<br>

@@ -1,19 +1,17 @@
 class UploadsController < ApplicationController
   def new
-  	@upload = Upload.new
+    @user = User.find(params[:id])
+    @upload = Upload.new
   end
 
   def create
-  	@user = User.find(params[:user_id])
-	@upload = @user.uploads.create(upload_params)
+    @user = User.find(params[:user_id])
+	  @upload = @user.uploads.create(upload_params)
   	if @upload.save
   	  render json: { message: "success" }, :status => 200
-  	  @result = Cloudinary::Uploader.upload @upload.image.path
-  	  @upload["public_id"] = @result["public_id"]
-	  @user.uploads.push(@upload)
+  	  @upload["public_id"] = Cloudinary::Uploader.upload(@upload.image.path)["public_id"]
+	    @user.uploads.push(@upload)
   	else
-  	  #  you need to send an error header, otherwise Dropzone
-          #  will not interpret the response as an error:
   	  render json: { error: @upload.errors.full_messages.join(',')}, :status => 400
   	end  		
   end

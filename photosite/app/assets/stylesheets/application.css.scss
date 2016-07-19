@@ -1,7 +1,10 @@
 /*
 *= require dropzone/dropzone
+*= require_tree .
+*= require_self
+*= require bxslider
 */
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
 @import "homepage";

@@ -1,4 +1,5 @@
 class SlideShowController < ApplicationController
-  def create
+  def index
+  	@user = User.find(params[:id])
   end
 end

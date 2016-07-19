@@ -1,0 +1,7 @@
+<% @user.uploads.all.each do |upload| %>
+	<%= cl_image_tag(upload["public_id"],
+		:height => 150,
+		:width => 150,
+		:crop => :fill)
+	%>
+	<% end %>
