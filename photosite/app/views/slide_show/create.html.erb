@@ -1,4 +1,4 @@
 <% @user.uploads.all.each do |upload| %>
 	<%= link_to cl_image_tag(upload["public_id"],:height => 250,:width => 250),
-		"http://localhost:3000" + "/user/" + @user["id"].to_s + "/uploads/" + upload["id"].to_s + "/edit"%>
+		request.original_url + "/uploads" + upload["id"].to_s + "/edit"%>
 <% end %>	

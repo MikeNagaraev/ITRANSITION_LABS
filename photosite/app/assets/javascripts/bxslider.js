@@ -1,10 +1,24 @@
 $(document).ready(function(){
   $('.bxslider').bxSlider({
-  maxSlides: 4,
-  slideWidth: 470,
-  slideMargin: 50,
-  ticker: true,
-  speed: 6000
+  mode: 'horizontal',
+  adaptiveHeight: true,
+  minSlides: 1,
+  slideWidth: 800,
+  slideMargin: 10,
+  speed: 1000,
+  pause: 500,
+  auto: true,
+  autoControls: true
   });
+
+   function applyFilter(index, filter) {
+    var obj = canvas.getActiveObject();
+    obj.filters[index] = filter;
+    obj.applyFilters(canvas.renderAll.bind(canvas));
+  }
+
+
+
+  
 });
 

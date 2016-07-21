@@ -1,0 +1,9 @@
+<% image = @user.uploads %>
+<div class="bxslider">
+  	<% image.all.each do |image| %>
+		<%=cl_image_tag(image["public_id"],
+		:height => 500,
+		:width => 800)
+	%>
+	<% end %>
+</div>

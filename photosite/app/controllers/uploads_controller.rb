@@ -4,6 +4,11 @@ class UploadsController < ApplicationController
     @upload = Upload.new
   end
 
+  def edit
+    @user = User.find(params[:user_id])
+    @upload = Upload.find(params[:id])
+  end
+
   def create
     @user = User.find(params[:user_id])
 	  @upload = @user.uploads.create(upload_params)
@@ -17,7 +22,7 @@ class UploadsController < ApplicationController
   end
 
   private
-  def upload_params
-  	params.require(:upload).permit(:image)
-  end
+    def upload_params
+  	    params.require(:upload).permit(:image)
+    end
 end
